@@ -1,0 +1,63 @@
+
+{
+    "_meta": {
+        "hash": {
+            "sha256": "853ad3e687f725ced529d46847b8a21c8406351d4439d059269a4b0947c54a2b"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.8"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            },
+            {
+                "name": "pytorch",
+                "url": "https://download.pytorch.org/whl/cu111",
+                "verify_ssl": true
+            },
+            {
+                "name": "dgl",
+                "url": "https://data.dgl.ai/wheels/repo.html",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "absl-py": {
+            "hashes": [
+                "sha256:84e6dcdc69c947d0c13e5457d056bd43cade4c2393dce00d684aedea77ddc2a3",
+                "sha256:ac511215c01ee9ae47b19716599e8ccfa746f2e18de72bdf641b79b22afa27ea"
+            ],
+            "markers": "python_version >= '3.6'",
+            "version": "==1.0.0"
+        },
+        "alabaster": {
+            "hashes": [
+                "sha256:446438bdcca0e05bd45ea2de1668c1d9b032e1a9154c2c259092d77031ddd359",
+                "sha256:a661d72d58e6ea8a57f7a86e37d86716863ee5e92788398526d58b26a4e4dc02"
+            ],
+            "version": "==0.7.12"
+        },
+        "argon2-cffi": {
+            "hashes": [
+                "sha256:8c976986f2c5c0e5000919e6de187906cfd81fb1c72bf9d88c01177e77da7f80",
+                "sha256:d384164d944190a7dd7ef22c6aa3ff197da12962bd04b17f64d4e93d934dba5b"
+            ],
+            "markers": "python_version >= '3.6'",
+            "version": "==21.3.0"
+        },
+        "argon2-cffi-bindings": {
+            "hashes": [
+                "sha256:20ef543a89dee4db46a1a6e206cd015360e5a75822f76df533845c3cbaf72670",
+                "sha256:2c3e3cc67fdb7d82c4718f19b4e7a87123caf8a93fde7e23cf66ac0337d3cb3f",
+                "sha256:3b9ef65804859d335dc6b31582cad2c5166f0c3e7975f324d9ffaa34ee7e6583",
+                "sha256:3e385d1c39c520c08b53d63300c3ecc28622f076f4c2b0e6d7e796e9f6502194",
+                "sha256:58ed19212051f49a523abb1dbe954337dc82d947fb6e5a0da60f7c8471a8476c",
+                "sha256:5e00316dabdaea0b2dd82d141cc66889ced0cdcbfa599e8b471cf22c620c329a",
+                "sha256:603ca0aba86b1349b147cab91ae970c63118a0f30444d4bc80355937c950c082",
+                "sha256:6a22ad9800121b71099d0fb0a65323810a15f2e292f2ba450810a7316e128ee5",
+                "sha256:8cd69c07dd875537a824deec19f978e0f2078fdda07fd5c42ac29668dda5f40f",
