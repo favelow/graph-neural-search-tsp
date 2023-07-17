@@ -37,3 +37,50 @@ def is_valid_tour(G, tour):
         return False
     for n in G.nodes:
         c = tour.count(n)
+        if n == 0:
+            if c != 2:
+                return False
+        elif c != 1:
+            return False
+    return True
+
+
+def optimal_tour(G, scale=1e3):
+    coords = scale * np.vstack([G.nodes[n]['pos'] for n in sorted(G.nodes)])
+    solver = concorde.TSPSolver.from_data(coords[:, 0], coords[:, 1], norm='EUC_2D')
+    solution = solver.solve()
+    tour = solution.tour.tolist() + [0]
+    return tour
+
+
+def optimal_cost(G, weight='weight'):
+    c = 0
+    for e in G.edges:
+        if G.edges[e]['in_solution']:
+            c += G.edges[e][weight]
+    return c
+
+
+def fixed_edge_tour(G, e, scale=1e3, lkh_path='LKH', **kwargs):
+    problem = tsplib95.models.StandardProblem()
+    problem.name = 'TSP'
+    problem.type = 'TSP'
+    problem.dimension = len(G.nodes)
+    problem.edge_weight_type = 'EUC_2D'
+    problem.node_coords = {n + 1: scale * G.nodes[n]['pos'] for n in G.nodes}
+    problem.fixed_edges = [[n + 1 for n in e]]
+
+    solution = lkh.solve(lkh_path, problem=problem, **kwargs)
+    tour = [n - 1 for n in solution[0]] + [0]
+    return tour
+
+
+def plot_edge_attribute(G, attr, ax, **kwargs):
+    cmap_colors = np.zeros((100, 4))
+    cmap_colors[:, 0] = 1
+    cmap_colors[:, 3] = np.linspace(0, 1, 100)
+    cmap = colors.ListedColormap(cmap_colors)
+
+    pos = nx.get_node_attributes(G, 'pos')
+
+    nx.draw(G, pos, edge_color=attr.values(), edge_cmap=cmap, ax=ax, **kwargs)
