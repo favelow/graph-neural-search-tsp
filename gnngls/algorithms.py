@@ -18,4 +18,8 @@ def nearest_neighbor(G, depot, weight='weight'):
     return tour
 
 
-def probabilistic_nearest_neighbour(G, depot, g
+def probabilistic_nearest_neighbour(G, depot, guide='weight', invert=True):
+    tour = [depot]
+
+    while len(tour) < len(G.nodes):
+ 
