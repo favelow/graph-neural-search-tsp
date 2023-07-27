@@ -14,4 +14,8 @@ def nearest_neighbor(G, depot, weight='weight'):
         j, dist = min(neighbours, key=lambda e: e[1])
         tour.append(j)
 
-    
+    tour.append(depot)
+    return tour
+
+
+def probabilistic_nearest_neighbour(G, depot, g
