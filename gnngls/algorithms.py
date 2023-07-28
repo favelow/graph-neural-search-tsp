@@ -22,4 +22,6 @@ def probabilistic_nearest_neighbour(G, depot, guide='weight', invert=True):
     tour = [depot]
 
     while len(tour) < len(G.nodes):
- 
+        i = tour[-1]
+
+        neighbours = [(j, G.edges[(i, j)][guide]) for j in G.neighbors(i) i
