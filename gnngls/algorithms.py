@@ -31,4 +31,8 @@ def probabilistic_nearest_neighbour(G, depot, guide='weight', invert=True):
         p = np.array(p)
 
         # if there are any infinite values, make these 1 and others 0
-        is_inf = np.isinf
+        is_inf = np.isinf(p)
+        if is_inf.any():
+            p = is_inf
+
+        # if th
