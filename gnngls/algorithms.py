@@ -35,4 +35,6 @@ def probabilistic_nearest_neighbour(G, depot, guide='weight', invert=True):
         if is_inf.any():
             p = is_inf
 
-        # if th
+        # if there are all 0s, make everything 1
+        if np.sum(p) == 0:
+            p[:] =
