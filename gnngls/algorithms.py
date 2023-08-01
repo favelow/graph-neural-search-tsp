@@ -37,4 +37,7 @@ def probabilistic_nearest_neighbour(G, depot, guide='weight', invert=True):
 
         # if there are all 0s, make everything 1
         if np.sum(p) == 0:
-            p[:] =
+            p[:] = 1.
+
+        # if the guide should be inverted, for example, edge weight
+   
