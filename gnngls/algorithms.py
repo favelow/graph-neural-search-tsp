@@ -40,4 +40,8 @@ def probabilistic_nearest_neighbour(G, depot, guide='weight', invert=True):
             p[:] = 1.
 
         # if the guide should be inverted, for example, edge weight
-   
+        if invert:
+            p = 1 / p
+
+        j = np.random.choice(nodes, p=p / np.sum(p))
+        t
