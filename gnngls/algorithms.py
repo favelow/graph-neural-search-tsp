@@ -44,4 +44,10 @@ def probabilistic_nearest_neighbour(G, depot, guide='weight', invert=True):
             p = 1 / p
 
         j = np.random.choice(nodes, p=p / np.sum(p))
-        t
+        tour.append(j)
+
+    tour.append(depot)
+    return tour
+
+
+def best_probabilistic_nearest_ne
