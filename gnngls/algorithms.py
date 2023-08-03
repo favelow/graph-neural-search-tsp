@@ -50,4 +50,5 @@ def probabilistic_nearest_neighbour(G, depot, guide='weight', invert=True):
     return tour
 
 
-def best_probabilistic_nearest_ne
+def best_probabilistic_nearest_neighbour(G, depot, n_iters, guide='weight', weight='weight'):
+    best_tour 
