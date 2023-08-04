@@ -58,4 +58,5 @@ def best_probabilistic_nearest_neighbour(G, depot, n_iters, guide='weight', weig
         new_tour = probabilistic_nearest_neighbour(G, depot, guide)
         new_cost = tour_cost(G, new_tour, weight)
 
-        
+        if new_cost < best_cost or best_tour is None:
+            best_tour, best_
