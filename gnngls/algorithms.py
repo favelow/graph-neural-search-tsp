@@ -59,4 +59,9 @@ def best_probabilistic_nearest_neighbour(G, depot, n_iters, guide='weight', weig
         new_cost = tour_cost(G, new_tour, weight)
 
         if new_cost < best_cost or best_tour is None:
-            best_tour, best_
+            best_tour, best_cost = new_tour, new_cost
+
+    return best_tour
+
+
+def cheapest_insertion(G, sub_tour, n, weigh
