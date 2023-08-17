@@ -69,4 +69,6 @@ def cheapest_insertion(G, sub_tour, n, weight='weight'):
     best_cost = 0
 
     for j in range(1, len(sub_tour)):
-        n
+        new_tour = sub_tour.copy()
+        new_tour.insert(j, n)
+        new_cost = tour_cost(G, new_tour, weight)
