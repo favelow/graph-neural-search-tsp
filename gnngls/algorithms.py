@@ -64,4 +64,9 @@ def best_probabilistic_nearest_neighbour(G, depot, n_iters, guide='weight', weig
     return best_tour
 
 
-def cheapest_insertion(G, sub_tour, n, weigh
+def cheapest_insertion(G, sub_tour, n, weight='weight'):
+    best_tour = None
+    best_cost = 0
+
+    for j in range(1, len(sub_tour)):
+        n
