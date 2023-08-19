@@ -74,4 +74,9 @@ def cheapest_insertion(G, sub_tour, n, weight='weight'):
         new_cost = tour_cost(G, new_tour, weight)
 
         if new_cost < best_cost or best_tour is None:
-            best_tour, best_cost = new
+            best_tour, best_cost = new_tour, new_cost
+
+    return best_tour
+
+
+def insertion(G, depot, mode='farthest', weight='w
