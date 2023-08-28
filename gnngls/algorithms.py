@@ -79,4 +79,5 @@ def cheapest_insertion(G, sub_tour, n, weight='weight'):
     return best_tour
 
 
-def insertion(G, depot, mode='farthest', weight='w
+def insertion(G, depot, mode='farthest', weight='weight'):
+    assert mode in ['random', 'nearest', 'farthest'], f'Unknown 
