@@ -80,4 +80,8 @@ def cheapest_insertion(G, sub_tour, n, weight='weight'):
 
 
 def insertion(G, depot, mode='farthest', weight='weight'):
-    assert mode in ['random', 'nearest', 'farthest'], f'Unknown 
+    assert mode in ['random', 'nearest', 'farthest'], f'Unknown mode: {mode}'
+
+    nodes = list(G.nodes)
+    nodes.remove(depot)
+    tour =
