@@ -84,4 +84,8 @@ def insertion(G, depot, mode='farthest', weight='weight'):
 
     nodes = list(G.nodes)
     nodes.remove(depot)
-    tour =
+    tour = [depot, depot]
+
+    while len(nodes) > 0:
+        if mode == 'random':
+            next_node = np.ran
