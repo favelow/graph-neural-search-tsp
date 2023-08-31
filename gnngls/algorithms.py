@@ -88,4 +88,10 @@ def insertion(G, depot, mode='farthest', weight='weight'):
 
     while len(nodes) > 0:
         if mode == 'random':
-            next_node = np.ran
+            next_node = np.random.choice(nodes)
+
+        else:
+            next_node = None
+            next_cost = 0
+
+         
