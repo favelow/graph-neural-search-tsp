@@ -94,4 +94,6 @@ def insertion(G, depot, mode='farthest', weight='weight'):
             next_node = None
             next_cost = 0
 
-         
+            for i in tour:
+                for j in nodes:
+                    if (mode == 'nearest' and G.edges[
