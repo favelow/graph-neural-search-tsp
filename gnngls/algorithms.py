@@ -99,4 +99,6 @@ def insertion(G, depot, mode='farthest', weight='weight'):
                     if (mode == 'nearest' and G.edges[i, j][weight] < next_cost) or \
                             (mode == 'farthest' and G.edges[i, j][weight] > next_cost) or \
                             (next_node is None):
-           
+                        next_node = j
+                        next_cost = G.edges[i, j][weight]
+
