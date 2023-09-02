@@ -102,3 +102,7 @@ def insertion(G, depot, mode='farthest', weight='weight'):
                         next_node = j
                         next_cost = G.edges[i, j][weight]
 
+        nodes.remove(next_node)
+        tour = cheapest_insertion(G, tour, next_node, weight)
+
+    return to
