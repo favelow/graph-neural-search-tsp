@@ -96,4 +96,5 @@ def insertion(G, depot, mode='farthest', weight='weight'):
 
             for i in tour:
                 for j in nodes:
-                    if (mode == 'nearest' and G.edges[
+                    if (mode == 'nearest' and G.edges[i, j][weight] < next_cost) or \
+                            (mode == 'farthest' and G.e
