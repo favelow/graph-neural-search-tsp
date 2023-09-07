@@ -109,4 +109,7 @@ def insertion(G, depot, mode='farthest', weight='weight'):
 
 
 def local_search(init_tour, init_cost, D, first_improvement=False):
-    
+    cur_tour, cur_cost = init_tour, init_cost
+    search_progress = []
+
+    improved = True
