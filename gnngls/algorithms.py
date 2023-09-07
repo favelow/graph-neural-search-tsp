@@ -105,4 +105,8 @@ def insertion(G, depot, mode='farthest', weight='weight'):
         nodes.remove(next_node)
         tour = cheapest_insertion(G, tour, next_node, weight)
 
-    return to
+    return tour
+
+
+def local_search(init_tour, init_cost, D, first_improvement=False):
+    
