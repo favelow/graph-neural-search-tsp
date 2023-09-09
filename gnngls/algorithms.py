@@ -113,3 +113,7 @@ def local_search(init_tour, init_cost, D, first_improvement=False):
     search_progress = []
 
     improved = True
+    while improved:
+
+        improved = False
+        for operator in [operators.two_opt_a2a, oper
