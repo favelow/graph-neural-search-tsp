@@ -118,4 +118,7 @@ def local_search(init_tour, init_cost, D, first_improvement=False):
         improved = False
         for operator in [operators.two_opt_a2a, operators.relocate_a2a]:
 
-            delta, new_tour = operator(cur_tour,
+            delta, new_tour = operator(cur_tour, D, first_improvement)
+            if delta < 0:
+                improved = True
+                cu
