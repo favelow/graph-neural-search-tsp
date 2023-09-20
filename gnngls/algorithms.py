@@ -121,4 +121,8 @@ def local_search(init_tour, init_cost, D, first_improvement=False):
             delta, new_tour = operator(cur_tour, D, first_improvement)
             if delta < 0:
                 improved = True
-                cu
+                cur_cost += delta
+                cur_tour = new_tour
+
+                search_progress.append({
+      
