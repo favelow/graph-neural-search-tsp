@@ -125,4 +125,6 @@ def local_search(init_tour, init_cost, D, first_improvement=False):
                 cur_tour = new_tour
 
                 search_progress.append({
-      
+                    'time': time.time(),
+                    'cost': cur_cost
+            
