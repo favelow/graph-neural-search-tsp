@@ -127,4 +127,9 @@ def local_search(init_tour, init_cost, D, first_improvement=False):
                 search_progress.append({
                     'time': time.time(),
                     'cost': cur_cost
-            
+                })
+
+    return cur_tour, cur_cost, search_progress
+
+
+def guided_local_search(
