@@ -132,4 +132,5 @@ def local_search(init_tour, init_cost, D, first_improvement=False):
     return cur_tour, cur_cost, search_progress
 
 
-def guided_local_search(
+def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=['weight'], perturbation_moves=30,
+     
