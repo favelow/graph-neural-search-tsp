@@ -138,3 +138,5 @@ def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=
     nx.set_edge_attributes(G, 0, 'penalty')
 
     edge_weight, _ = nx.attr_matrix(G, weight)
+
+    cur_tour, cur_cost, search_progress = local_search(init_tour, init_cost, edge_weight, first_
