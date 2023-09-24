@@ -133,4 +133,6 @@ def local_search(init_tour, init_cost, D, first_improvement=False):
 
 
 def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=['weight'], perturbation_moves=30,
-     
+                        first_improvement=False):
+    k = 0.1 * init_cost / len(G.nodes)
+    nx.set_edge_
