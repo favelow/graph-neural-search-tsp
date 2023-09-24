@@ -139,4 +139,7 @@ def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=
 
     edge_weight, _ = nx.attr_matrix(G, weight)
 
-    cur_tour, cur_cost, search_progress = local_search(init_tour, init_cost, edge_weight, first_
+    cur_tour, cur_cost, search_progress = local_search(init_tour, init_cost, edge_weight, first_improvement)
+    best_tour, best_cost = cur_tour, cur_cost
+
+    iter_i = 0
