@@ -143,3 +143,5 @@ def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=
     best_tour, best_cost = cur_tour, cur_cost
 
     iter_i = 0
+    while time.time() < t_lim:
+        guide = guides[iter_i % len(guides)]  # option
