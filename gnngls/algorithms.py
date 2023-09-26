@@ -144,4 +144,8 @@ def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=
 
     iter_i = 0
     while time.time() < t_lim:
-        guide = guides[iter_i % len(guides)]  # option
+        guide = guides[iter_i % len(guides)]  # option change guide ever iteration (as in KGLS)
+
+        # perturbation
+        moves = 0
+        
