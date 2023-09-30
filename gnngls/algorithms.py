@@ -148,4 +148,6 @@ def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=
 
         # perturbation
         moves = 0
-        
+        while moves < perturbation_moves:
+            # penalize edge
+            max_util 
