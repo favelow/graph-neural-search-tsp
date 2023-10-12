@@ -154,4 +154,6 @@ def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=
             max_util_e = None
             for e in zip(cur_tour[:-1], cur_tour[1:]):
                 util = G.edges[e][guide] / (1 + G.edges[e]['penalty'])
-                
+                if util > max_util or max_util_e is None:
+                    max_util = util
+ 
