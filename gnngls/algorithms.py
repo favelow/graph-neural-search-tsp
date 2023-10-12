@@ -152,4 +152,6 @@ def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=
             # penalize edge
             max_util = 0
             max_util_e = None
-            for e in zip(cur_tour[:-1], cur_tou
+            for e in zip(cur_tour[:-1], cur_tour[1:]):
+                util = G.edges[e][guide] / (1 + G.edges[e]['penalty'])
+                
