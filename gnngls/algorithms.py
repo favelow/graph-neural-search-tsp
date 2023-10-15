@@ -165,4 +165,7 @@ def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=
 
             # apply operator to edge
             for n in max_util_e:
+                if n != 0:  # not the depot
+                    i = cur_tour.index(n)
+
            
