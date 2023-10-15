@@ -168,4 +168,4 @@ def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=
                 if n != 0:  # not the depot
                     i = cur_tour.index(n)
 
-           
+                    for operator in [operators.two_opt_o2a, operators.relocate_o2a]
