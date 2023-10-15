@@ -171,4 +171,6 @@ def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=
                     for operator in [operators.two_opt_o2a, operators.relocate_o2a]:
                         moved = False
 
-                        delta, new_tour = operator(cur
+                        delta, new_tour = operator(cur_tour, edge_weight_guided, i, first_improvement)
+                        if delta < 0:
+                
