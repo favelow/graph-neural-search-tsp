@@ -174,4 +174,7 @@ def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=
                         delta, new_tour = operator(cur_tour, edge_weight_guided, i, first_improvement)
                         if delta < 0:
                             cur_cost = tour_cost(G, new_tour, weight)
-                            cur
+                            cur_tour = new_tour
+                            moved = True
+
+    
