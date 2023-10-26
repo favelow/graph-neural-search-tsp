@@ -178,4 +178,6 @@ def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=
                             moved = True
 
                             search_progress.append({
-                              
+                                'time': time.time(),
+                                'cost': cur_cost
+                  
