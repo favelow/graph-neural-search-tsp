@@ -177,4 +177,5 @@ def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=
                             cur_tour = new_tour
                             moved = True
 
-    
+                            search_progress.append({
+                              
