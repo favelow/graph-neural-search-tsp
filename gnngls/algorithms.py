@@ -185,4 +185,7 @@ def guided_local_search(G, init_tour, init_cost, t_lim, weight='weight', guides=
                         moves += moved
 
         # optimisation
-        cur_tour, cur_cost, new_search_progress = local_search(cur_tour, cur_cost, edge_weigh
+        cur_tour, cur_cost, new_search_progress = local_search(cur_tour, cur_cost, edge_weight, first_improvement)
+        search_progress += new_search_progress
+        if cur_cost < best_cost:
+      
