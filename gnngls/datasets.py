@@ -8,4 +8,8 @@ import numpy as np
 import torch
 import torch.utils.data
 
-from . import tour_cost, fixed_edg
+from . import tour_cost, fixed_edge_tour, optimal_cost as get_optimal_cost
+
+
+def set_features(G):
+    for e in G.edg
