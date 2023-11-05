@@ -12,4 +12,8 @@ from . import tour_cost, fixed_edge_tour, optimal_cost as get_optimal_cost
 
 
 def set_features(G):
-    for e in G.edg
+    for e in G.edges:
+        i, j = e
+
+        G.edges[e]['features'] = np.array([
+            G.e
