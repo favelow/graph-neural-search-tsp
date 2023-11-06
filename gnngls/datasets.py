@@ -16,4 +16,9 @@ def set_features(G):
         i, j = e
 
         G.edges[e]['features'] = np.array([
-            G.e
+            G.edges[e]['weight'],
+        ], dtype=np.float32)
+
+
+def set_labels(G):
+    optimal_cost
