@@ -21,4 +21,9 @@ def set_features(G):
 
 
 def set_labels(G):
-    optimal_cost
+    optimal_cost = get_optimal_cost(G)
+
+    for e in G.edges:
+        regret = 0.
+
+        if not G.
