@@ -27,4 +27,6 @@ def set_labels(G):
         regret = 0.
 
         if not G.edges[e]['in_solution']:
-            tour = fixed_edge_tour(G, e, scale=1e6, max_trials=100, r
+            tour = fixed_edge_tour(G, e, scale=1e6, max_trials=100, runs=10)
+            cost = tour_cost(G, tour)
+            regret = (cost - opt
