@@ -26,4 +26,5 @@ def set_labels(G):
     for e in G.edges:
         regret = 0.
 
-        if not G.
+        if not G.edges[e]['in_solution']:
+            tour = fixed_edge_tour(G, e, scale=1e6, max_trials=100, r
