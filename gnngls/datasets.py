@@ -34,4 +34,5 @@ def set_labels(G):
         G.edges[e]['regret'] = regret
 
 
-class TSPDataset(torch.utils.d
+class TSPDataset(torch.utils.data.Dataset):
+    def __init__(self, instances_file, scalers_file=None, feat_drop_
