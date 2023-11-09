@@ -35,4 +35,6 @@ def set_labels(G):
 
 
 class TSPDataset(torch.utils.data.Dataset):
-    def __init__(self, instances_file, scalers_file=None, feat_drop_
+    def __init__(self, instances_file, scalers_file=None, feat_drop_idx=[]):
+        if not isinstance(instances_file, pathlib.Path):
+            instances_fi
