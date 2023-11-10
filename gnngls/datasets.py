@@ -42,4 +42,6 @@ class TSPDataset(torch.utils.data.Dataset):
 
         self.instances = [line.strip() for line in open(instances_file)]
 
-        if scalers
+        if scalers_file is None:
+            scalers_file = self.root_dir / 'scalers.pkl'
+        scalers 
