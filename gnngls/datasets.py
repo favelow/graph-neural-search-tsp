@@ -53,4 +53,8 @@ class TSPDataset(torch.utils.data.Dataset):
         self.feat_drop_idx = feat_drop_idx
 
         # only works for homogenous datasets
-        G = nx.read_gpickle(self.root_dir / self.instances[0]
+        G = nx.read_gpickle(self.root_dir / self.instances[0])
+        lG = nx.line_graph(G)
+        for n in lG.nodes:
+            lG.nodes[n]['e'] = n
+        
