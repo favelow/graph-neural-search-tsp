@@ -48,4 +48,8 @@ class TSPDataset(torch.utils.data.Dataset):
         if 'edges' in scalers: # for backward compatability
             self.scalers = scalers['edges']
         else:
-            
+            self.scalers = scalers
+
+        self.feat_drop_idx = feat_drop_idx
+
+        # only 
