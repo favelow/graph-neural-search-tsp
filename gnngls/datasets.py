@@ -45,4 +45,7 @@ class TSPDataset(torch.utils.data.Dataset):
         if scalers_file is None:
             scalers_file = self.root_dir / 'scalers.pkl'
         scalers = pickle.load(open(scalers_file, 'rb'))
-        if 'edges' in scalers: # for backw
+        if 'edges' in scalers: # for backward compatability
+            self.scalers = scalers['edges']
+        else:
+            
