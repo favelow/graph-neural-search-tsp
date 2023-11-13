@@ -57,4 +57,7 @@ class TSPDataset(torch.utils.data.Dataset):
         lG = nx.line_graph(G)
         for n in lG.nodes:
             lG.nodes[n]['e'] = n
-        
+        self.G = dgl.from_networkx(lG, node_attrs=['e'])
+
+    def __len__(self):
+        return len(self.instance
