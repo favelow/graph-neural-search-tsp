@@ -60,4 +60,8 @@ class TSPDataset(torch.utils.data.Dataset):
         self.G = dgl.from_networkx(lG, node_attrs=['e'])
 
     def __len__(self):
-        return len(self.instance
+        return len(self.instances)
+
+    def __getitem__(self, i):
+        if torch.is_tensor(i):
+            i = i.tolist()
