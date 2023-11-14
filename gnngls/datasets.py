@@ -65,3 +65,6 @@ class TSPDataset(torch.utils.data.Dataset):
     def __getitem__(self, i):
         if torch.is_tensor(i):
             i = i.tolist()
+
+        G = nx.read_gpickle(self.root_dir / self.instances[i])
+        H = self.get_
