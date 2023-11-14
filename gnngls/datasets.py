@@ -67,4 +67,8 @@ class TSPDataset(torch.utils.data.Dataset):
             i = i.tolist()
 
         G = nx.read_gpickle(self.root_dir / self.instances[i])
-        H = self.get_
+        H = self.get_scaled_features(G)
+        return H
+
+    def get_scaled_features(self, G):
+        fe
