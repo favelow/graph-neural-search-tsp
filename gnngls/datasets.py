@@ -71,4 +71,7 @@ class TSPDataset(torch.utils.data.Dataset):
         return H
 
     def get_scaled_features(self, G):
-        fe
+        features = []
+        regret = []
+        in_solution = []
+        for i in range(self.G.num
