@@ -78,4 +78,7 @@ class TSPDataset(torch.utils.data.Dataset):
             e = tuple(self.G.ndata['e'][i].numpy())  # corresponding edge
 
             features.append(G.edges[e]['features'])
-            regret.append(G
+            regret.append(G.edges[e]['regret'])
+            in_solution.append(G.edges[e]['in_solution'])
+
+   
