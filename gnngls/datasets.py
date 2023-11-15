@@ -74,4 +74,5 @@ class TSPDataset(torch.utils.data.Dataset):
         features = []
         regret = []
         in_solution = []
-        for i in range(self.G.num
+        for i in range(self.G.number_of_nodes()):
+            e = tuple(self.G.ndata['e'][i].numpy())  # correspondi
