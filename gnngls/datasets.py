@@ -81,4 +81,5 @@ class TSPDataset(torch.utils.data.Dataset):
             regret.append(G.edges[e]['regret'])
             in_solution.append(G.edges[e]['in_solution'])
 
-   
+        features = np.vstack(features)
+        features_transformed = self.scalers['featu
