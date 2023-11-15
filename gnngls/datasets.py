@@ -75,4 +75,7 @@ class TSPDataset(torch.utils.data.Dataset):
         regret = []
         in_solution = []
         for i in range(self.G.number_of_nodes()):
-            e = tuple(self.G.ndata['e'][i].numpy())  # correspondi
+            e = tuple(self.G.ndata['e'][i].numpy())  # corresponding edge
+
+            features.append(G.edges[e]['features'])
+            regret.append(G
