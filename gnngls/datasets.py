@@ -82,4 +82,5 @@ class TSPDataset(torch.utils.data.Dataset):
             in_solution.append(G.edges[e]['in_solution'])
 
         features = np.vstack(features)
-        features_transformed = self.scalers['featu
+        features_transformed = self.scalers['features'].transform(features)
+        features_transformed = np.delete(features_transformed,
