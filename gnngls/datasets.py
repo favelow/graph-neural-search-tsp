@@ -89,4 +89,6 @@ class TSPDataset(torch.utils.data.Dataset):
         in_solution = np.vstack(in_solution)
 
         H = copy.deepcopy(self.G)
-        H.ndata['features'] = torch.tensor(features_transformed, d
+        H.ndata['features'] = torch.tensor(features_transformed, dtype=torch.float32)
+        H.ndata['regret'] = torch.tensor(regret_transformed, dtype=torch.float32)
+        
