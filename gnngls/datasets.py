@@ -88,4 +88,5 @@ class TSPDataset(torch.utils.data.Dataset):
         regret_transformed = self.scalers['regret'].transform(regret)
         in_solution = np.vstack(in_solution)
 
-        H = c
+        H = copy.deepcopy(self.G)
+        H.ndata['features'] = torch.tensor(features_transformed, d
