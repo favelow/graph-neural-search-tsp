@@ -85,4 +85,7 @@ class TSPDataset(torch.utils.data.Dataset):
         features_transformed = self.scalers['features'].transform(features)
         features_transformed = np.delete(features_transformed, self.feat_drop_idx, axis=1)
         regret = np.vstack(regret)
-        regret_transformed = self.scalers['reg
+        regret_transformed = self.scalers['regret'].transform(regret)
+        in_solution = np.vstack(in_solution)
+
+        H = c
