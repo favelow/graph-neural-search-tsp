@@ -7,3 +7,6 @@ class SkipConnection(nn.Module):
         super().__init__()
         self.module = module
 
+    def forward(self, x, G=None):
+        if G is not None:
+            y = self.module
