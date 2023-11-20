@@ -92,4 +92,4 @@ class TSPDataset(torch.utils.data.Dataset):
         H.ndata['features'] = torch.tensor(features_transformed, dtype=torch.float32)
         H.ndata['regret'] = torch.tensor(regret_transformed, dtype=torch.float32)
         H.ndata['in_solution'] = torch.tensor(regret, dtype=torch.float32)
-        re
+        return H
