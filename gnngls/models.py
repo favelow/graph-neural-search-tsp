@@ -9,4 +9,8 @@ class SkipConnection(nn.Module):
 
     def forward(self, x, G=None):
         if G is not None:
-            y = self.module
+            y = self.module(G, x).view(G.number_of_nodes(), -1)
+        else:
+            y = self.module(x)
+        return x + y
+
