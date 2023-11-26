@@ -14,3 +14,6 @@ class SkipConnection(nn.Module):
             y = self.module(x)
         return x + y
 
+
+class AttentionLayer(nn.Module):
+    def __init__(self, embed_dim, n_heads, hidde
