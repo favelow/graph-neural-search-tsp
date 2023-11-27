@@ -20,4 +20,7 @@ class AttentionLayer(nn.Module):
         super().__init__()
 
         self.message_passing = SkipConnection(
-      
+            dgl.nn.GATConv(embed_dim, embed_dim // n_heads, n_heads)
+        )
+
+       
