@@ -16,4 +16,8 @@ class SkipConnection(nn.Module):
 
 
 class AttentionLayer(nn.Module):
-    def __init__(self, embed_dim, n_heads, hidde
+    def __init__(self, embed_dim, n_heads, hidden_dim):
+        super().__init__()
+
+        self.message_passing = SkipConnection(
+      
