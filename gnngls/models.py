@@ -23,4 +23,6 @@ class AttentionLayer(nn.Module):
             dgl.nn.GATConv(embed_dim, embed_dim // n_heads, n_heads)
         )
 
-       
+        self.feed_forward = nn.Sequential(
+            nn.BatchNorm1d(embed_dim),
+         
