@@ -25,4 +25,6 @@ class AttentionLayer(nn.Module):
 
         self.feed_forward = nn.Sequential(
             nn.BatchNorm1d(embed_dim),
-         
+            SkipConnection(
+                nn.Sequential(
+                    nn.Linear(embed_dim, 
