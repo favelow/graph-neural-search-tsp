@@ -29,4 +29,10 @@ class AttentionLayer(nn.Module):
                 nn.Sequential(
                     nn.Linear(embed_dim, hidden_dim),
                     nn.ReLU(),
-                    nn.Linear(hidden_dim, embed_dim
+                    nn.Linear(hidden_dim, embed_dim)
+                ),
+            ),
+            nn.BatchNorm1d(embed_dim),
+        )
+
+    de
