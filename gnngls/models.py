@@ -27,4 +27,6 @@ class AttentionLayer(nn.Module):
             nn.BatchNorm1d(embed_dim),
             SkipConnection(
                 nn.Sequential(
-                    nn.Linear(embed_dim, 
+                    nn.Linear(embed_dim, hidden_dim),
+                    nn.ReLU(),
+                    nn.Linear(hidden_dim, embed_dim
