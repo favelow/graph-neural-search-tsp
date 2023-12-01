@@ -41,4 +41,8 @@ class AttentionLayer(nn.Module):
         return h
 
 
-class EdgePropertyPredi
+class EdgePropertyPredictionModel(nn.Module):
+    def __init__(
+            self,
+            in_dim,
+            
