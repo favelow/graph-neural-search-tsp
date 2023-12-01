@@ -35,4 +35,5 @@ class AttentionLayer(nn.Module):
             nn.BatchNorm1d(embed_dim),
         )
 
-    de
+    def forward(self, G, x):
+        h = self.message_passing(x, G=G).view(G.number_o
