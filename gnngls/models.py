@@ -36,4 +36,9 @@ class AttentionLayer(nn.Module):
         )
 
     def forward(self, G, x):
-        h = self.message_passing(x, G=G).view(G.number_o
+        h = self.message_passing(x, G=G).view(G.number_of_nodes(), -1)
+        h = self.feed_forward(h)
+        return h
+
+
+class EdgePropertyPredi
