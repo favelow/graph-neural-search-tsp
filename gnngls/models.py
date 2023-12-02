@@ -45,4 +45,7 @@ class EdgePropertyPredictionModel(nn.Module):
     def __init__(
             self,
             in_dim,
-            
+            embed_dim,
+            out_dim,
+            n_layers,
+            n_heads=1,
