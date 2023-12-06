@@ -49,3 +49,9 @@ class EdgePropertyPredictionModel(nn.Module):
             out_dim,
             n_layers,
             n_heads=1,
+    ):
+        super().__init__()
+
+        self.embed_dim = embed_dim
+
+       
