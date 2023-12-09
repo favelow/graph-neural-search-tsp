@@ -54,4 +54,6 @@ class EdgePropertyPredictionModel(nn.Module):
 
         self.embed_dim = embed_dim
 
-       
+        self.embed_layer = nn.Linear(in_dim, embed_dim)
+
+        self.message_passing_layers 
