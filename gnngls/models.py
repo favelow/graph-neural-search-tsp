@@ -60,4 +60,8 @@ class EdgePropertyPredictionModel(nn.Module):
             *(AttentionLayer(embed_dim, n_heads, 512) for _ in range(n_heads))
         )
 
-        self.decision_layer = nn.Linear(embed_dim, out_
+        self.decision_layer = nn.Linear(embed_dim, out_dim)
+
+    def forward(self, G, x):
+        h = self.embed_layer(x)
+        for l in self.message_
