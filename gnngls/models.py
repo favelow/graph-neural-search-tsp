@@ -57,4 +57,7 @@ class EdgePropertyPredictionModel(nn.Module):
         self.embed_layer = nn.Linear(in_dim, embed_dim)
 
         self.message_passing_layers = dgl.nn.utils.Sequential(
-            *(AttentionLayer(embed_dim, n_heads, 512)
+            *(AttentionLayer(embed_dim, n_heads, 512) for _ in range(n_heads))
+        )
+
+        self.decision_layer = nn.Linear(embed_dim, out_
