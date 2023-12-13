@@ -64,4 +64,7 @@ class EdgePropertyPredictionModel(nn.Module):
 
     def forward(self, G, x):
         h = self.embed_layer(x)
-        for l in self.message_
+        for l in self.message_passing_layers:
+            h = l(G, h)
+        h = self.decision_layer(h)
+        return h
