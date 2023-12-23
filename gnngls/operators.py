@@ -15,3 +15,8 @@ def two_opt_cost(tour, D, i, j):
     if i == j:
         return 0
     elif j < i:
+        i, j = j, i
+
+    a = tour[i]
+    b = tour[i - 1]
+    c = tour[j]
