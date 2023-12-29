@@ -24,4 +24,13 @@ def two_opt_cost(tour, D, i, j):
 
     delta = D[a, c] \
             + D[b, d] \
-          
+            - D[a, b] \
+            - D[c, d]
+    return delta
+
+
+def two_opt_a2a(tour, D, first_improvement=False):
+    best_move = None
+    best_delta = 0
+
+    idxs = range(1, len(tour) -
