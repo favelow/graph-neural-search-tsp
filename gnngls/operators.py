@@ -20,3 +20,8 @@ def two_opt_cost(tour, D, i, j):
     a = tour[i]
     b = tour[i - 1]
     c = tour[j]
+    d = tour[j - 1]
+
+    delta = D[a, c] \
+            + D[b, d] \
+          
