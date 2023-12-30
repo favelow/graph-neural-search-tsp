@@ -33,4 +33,7 @@ def two_opt_a2a(tour, D, first_improvement=False):
     best_move = None
     best_delta = 0
 
-    idxs = range(1, len(tour) -
+    idxs = range(1, len(tour) - 1)
+    for i, j in itertools.combinations(idxs, 2):
+        if abs(i - j) < 2:
+           
