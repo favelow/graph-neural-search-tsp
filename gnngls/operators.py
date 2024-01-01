@@ -36,4 +36,7 @@ def two_opt_a2a(tour, D, first_improvement=False):
     idxs = range(1, len(tour) - 1)
     for i, j in itertools.combinations(idxs, 2):
         if abs(i - j) < 2:
-           
+            continue
+
+        delta = two_opt_cost(tour, D, i, j)
+        if delta < bes
