@@ -39,4 +39,6 @@ def two_opt_a2a(tour, D, first_improvement=False):
             continue
 
         delta = two_opt_cost(tour, D, i, j)
-        if delta < bes
+        if delta < best_delta and not np.isclose(0, delta):
+            best_delta = delta
+           
