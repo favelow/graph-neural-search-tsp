@@ -51,4 +51,9 @@ def two_opt_a2a(tour, D, first_improvement=False):
 
 
 def two_opt_o2a(tour, D, i, first_improvement=False):
-    assert i > 0 and i < len(tour) 
+    assert i > 0 and i < len(tour) - 1
+
+    best_move = None
+    best_delta = 0
+
+    idxs = range(1, len(to
