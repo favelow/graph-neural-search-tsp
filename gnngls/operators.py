@@ -56,4 +56,9 @@ def two_opt_o2a(tour, D, i, first_improvement=False):
     best_move = None
     best_delta = 0
 
-    idxs = range(1, len(to
+    idxs = range(1, len(tour) - 1)
+    for j in idxs:
+        if abs(i - j) < 2:
+            continue
+
+   
