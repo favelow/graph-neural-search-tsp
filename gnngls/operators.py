@@ -65,4 +65,8 @@ def two_opt_o2a(tour, D, i, first_improvement=False):
         if delta < best_delta and not np.isclose(0, delta):
             best_delta = delta
             best_move = i, j
-    
+            if first_improvement:
+                break
+
+    if best_move is not None:
+        return best_delta,
