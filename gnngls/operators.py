@@ -69,4 +69,9 @@ def two_opt_o2a(tour, D, i, first_improvement=False):
                 break
 
     if best_move is not None:
-        return best_delta,
+        return best_delta, two_opt(tour, *best_move)
+    return 0, tour
+
+
+def relocate(tour, i, j):
+    new_tour = 
