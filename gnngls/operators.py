@@ -74,4 +74,10 @@ def two_opt_o2a(tour, D, i, first_improvement=False):
 
 
 def relocate(tour, i, j):
-    new_tour = 
+    new_tour = tour.copy()
+    n = new_tour.pop(i)
+    new_tour.insert(j, n)
+    return new_tour
+
+
+def r
