@@ -89,4 +89,9 @@ def relocate_cost(tour, D, i, j):
     c = tour[i + 1]
     if i < j:
         d = tour[j]
-    
+        e = tour[j + 1]
+    else:
+        d = tour[j - 1]
+        e = tour[j]
+
+  
