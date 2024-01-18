@@ -80,4 +80,8 @@ def relocate(tour, i, j):
     return new_tour
 
 
-def r
+def relocate_cost(tour, D, i, j):
+    if i == j:
+        return 0
+
+ 
