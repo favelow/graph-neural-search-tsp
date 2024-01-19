@@ -97,4 +97,10 @@ def relocate_cost(tour, D, i, j):
     delta = -D[a, b] \
             - D[b, c] \
             + D[a, c] \
-     
+            - D[d, e] \
+            + D[d, b] \
+            + D[b, e]
+    return delta
+
+
+def relocat
