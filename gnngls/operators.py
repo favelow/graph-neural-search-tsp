@@ -103,4 +103,7 @@ def relocate_cost(tour, D, i, j):
     return delta
 
 
-def relocat
+def relocate_o2a(tour, D, i, first_improvement=False):
+    assert i > 0 and i < len(tour) - 1
+
+ 
