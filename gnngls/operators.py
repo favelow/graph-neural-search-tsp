@@ -106,4 +106,8 @@ def relocate_cost(tour, D, i, j):
 def relocate_o2a(tour, D, i, first_improvement=False):
     assert i > 0 and i < len(tour) - 1
 
- 
+    best_move = None
+    best_delta = 0
+
+    idxs = range(1, len(tour) - 1)
+    for j in idxs
