@@ -110,4 +110,9 @@ def relocate_o2a(tour, D, i, first_improvement=False):
     best_delta = 0
 
     idxs = range(1, len(tour) - 1)
-    for j in idxs
+    for j in idxs:
+        if i == j:
+            continue
+
+        delta = relocate_cost(tour, D, i, j)
+     
