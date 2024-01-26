@@ -117,4 +117,9 @@ def relocate_o2a(tour, D, i, first_improvement=False):
         delta = relocate_cost(tour, D, i, j)
         if delta < best_delta and not np.isclose(0, delta):
             best_delta = delta
-            
+            best_move = i, j
+            if first_improvement:
+                break
+
+    if best_move is not None:
+        r
