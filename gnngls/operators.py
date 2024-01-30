@@ -132,4 +132,7 @@ def relocate_a2a(tour, D, first_improvement=False):
 
     idxs = range(1, len(tour) - 1)
     for i, j in itertools.permutations(idxs, 2):
-        if i - j == 1:  # e.g. r
+        if i - j == 1:  # e.g. relocate 2 -> 3 == relocate 3 -> 2
+            continue
+
+        delta = relocate_cost(tour, D, i, j)
