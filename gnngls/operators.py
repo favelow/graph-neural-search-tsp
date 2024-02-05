@@ -136,3 +136,5 @@ def relocate_a2a(tour, D, first_improvement=False):
             continue
 
         delta = relocate_cost(tour, D, i, j)
+        if delta < best_delta and not np.isclose(0, delta):
+            best_delta = delta
