@@ -142,3 +142,5 @@ def relocate_a2a(tour, D, first_improvement=False):
             if first_improvement:
                 break
 
+    if best_move is not None:
+        return best_delta, relocate(tour, *best_mo
