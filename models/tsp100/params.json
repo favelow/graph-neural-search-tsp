@@ -1,1 +1,1 @@
-{"data_dir": "../../data/tsp100", "tb_dir": "../../runs", "embed_dim": 128, "n_layers": 3, "layer_type": "gat", "n_heads": 8, "lr_init"
+{"data_dir": "../../data/tsp100", "tb_dir": "../../runs", "embed_dim": 128, "n_layers": 3, "layer_type": "gat", "n_heads": 8, "lr_init": 0.001, "lr_decay": 0.99, "min_delta": 0.0001, "patience": 20, "batch_size": 15, "n_epochs"
