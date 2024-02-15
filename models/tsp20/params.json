@@ -1,1 +1,1 @@
-{"data_dir": "../../data_2/ts
+{"data_dir": "../../data_2/tsp20", "tb_dir": "../../runs/edge_only", "embed_dim": 128, "n_layers": 3, "layer_t
