@@ -44,3 +44,8 @@ if __name__ == '__main__':
 
     for instance_path in tqdm.tqdm(train_set, total=len(train_set)):
         G = nx.read_gpickle(instance_path)
+
+        for k in scalers:
+            scalers[k].partial_fit(np.vstack([G.edges[e][k] for e in G.edges]))
+
+    pickle.dump(scalers, open(args.dir / 'scalers.pkl', 'wb'))
