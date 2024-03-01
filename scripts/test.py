@@ -87,3 +87,38 @@ if __name__ == '__main__':
 
         else:
             init_tour = algorithms.nearest_neighbor(G, 0, weight='weight')
+
+        init_cost = gnngls.tour_cost(G, init_tour)
+        best_tour, best_cost, search_progress_i = algorithms.guided_local_search(G, init_tour, init_cost,
+                                                                                 t + args.time_limit, weight='weight',
+                                                                                 guides=args.guides,
+                                                                                 perturbation_moves=args.perturbation_moves,
+                                                                                 first_improvement=False)
+
+        for row in search_progress_i:
+            row.update({
+                'instance': instance,
+                'opt_cost': opt_cost
+            })
+            search_progress.append(row)
+
+        gap = (best_cost / opt_cost - 1) * 100
+        gaps.append(gap)
+        pbar.set_postfix({
+            'Avg Gap': '{:.4f}'.format(np.mean(gaps)),
+        })
+        pbar.update(1)
+
+    pbar.close()
+
+    search_progress_df = pd.DataFrame.from_records(search_progress)
+    search_progress_df['best_cost'] = search_progress_df.groupby('instance')['cost'].cummin()
+    search_progress_df['gap'] = (search_progress_df['best_cost'] / search_progress_df['opt_cost'] - 1) * 100
+    search_progress_df['dt'] = search_progress_df['time'] - search_progress_df.groupby('instance')['time'].transform(
+        'min')
+
+    timestamp = datetime.datetime.now().strftime('%b%d_%H-%M-%S')
+    run_name = f'{timestamp}_{uuid.uuid4().hex}.pkl'
+    if not args.run_dir.exists():
+        args.run_dir.mkdir()
+    search_progress_df.to_pickle(args.run_dir / run_name)
