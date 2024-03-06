@@ -162,3 +162,10 @@ if __name__ == '__main__':
         lr_scheduler.step()
 
     writer.close()
+
+    params = dict(vars(args))
+    params['data_dir'] = str(params['data_dir'])
+    params['tb_dir'] = str(params['tb_dir'])
+    json.dump(params, open(args.tb_dir / run_name / 'params.json', 'w'))
+
+    save(model, optimizer, epoch, epoch_loss, epoch_val_loss, log_dir / 'checkpoint_final.pt')
