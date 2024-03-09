@@ -5,4 +5,5 @@ setup(name='gnngls',
       author='Ben Hudson',
       author_email='benhudson@fastmail.com',
       version='0.01',
-      packages=['g
+      packages=['gnngls'],
+      )
