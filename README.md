@@ -8,4 +8,6 @@ Want to jump to [the example](https://github.com/favelow/graph-neural-search-tsp
 This project uses various test datasets and models. For correct setup, you need to install [git lfs](https://git-lfs.github.com/).
 
 1. Install [git lfs](https://git-lfs.github.com/)
-2. Install [pipen
+2. Install [pipenv](https://pipenv.pypa.io)
+3. Clone the repo
+4. Navigate to the repo and run `pipenv install` in 
