@@ -10,4 +10,8 @@ This project uses various test datasets and models. For correct setup, you need 
 1. Install [git lfs](https://git-lfs.github.com/)
 2. Install [pipenv](https://pipenv.pypa.io)
 3. Clone the repo
-4. Navigate to the repo and run `pipenv install` in 
+4. Navigate to the repo and run `pipenv install` in the root directory
+5. Run `pipenv shell` to activate the environment
+
+## Datasets
+Test 
