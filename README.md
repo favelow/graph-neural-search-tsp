@@ -14,4 +14,6 @@ This project uses various test datasets and models. For correct setup, you need 
 5. Run `pipenv shell` to activate the environment
 
 ## Datasets
-Test datasets used in the paper are in the [data](https://github.com/favelow/graph-n
+Test datasets used in the paper are in the [data](https://github.com/favelow/graph-neural-search-tsp/tree/master/data) directory.
+
+You can also generate new dat
