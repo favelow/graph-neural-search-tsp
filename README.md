@@ -16,4 +16,6 @@ This project uses various test datasets and models. For correct setup, you need 
 ## Datasets
 Test datasets used in the paper are in the [data](https://github.com/favelow/graph-neural-search-tsp/tree/master/data) directory.
 
-You can also generate new datasets in two steps: instance generation and preprocessing. You can generate solved TSP inst
+You can also generate new datasets in two steps: instance generation and preprocessing. You can generate solved TSP instances using:
+```
+./generate_instances.py <number of instances to generate> <number
