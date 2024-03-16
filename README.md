@@ -20,4 +20,8 @@ You can also generate new datasets in two steps: instance generation and preproc
 ```
 ./generate_instances.py <number of instances to generate> <number of nodes> <dataset directory>
 ```
-The specified directory is created. Each instance is a pickled `netwo
+The specified directory is created. Each instance is a pickled `networkx.Graph`.
+
+Then, prepare the dataset using:
+```
+./preprocess_dataset.py <dataset di
