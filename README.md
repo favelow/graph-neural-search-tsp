@@ -24,4 +24,6 @@ The specified directory is created. Each instance is a pickled `networkx.Graph`.
 
 Then, prepare the dataset using:
 ```
-./preprocess_dataset.py <dataset di
+./preprocess_dataset.py <dataset directory>
+```
+This splits the dataset into training, validation, and test sets
