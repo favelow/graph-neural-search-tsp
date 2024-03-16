@@ -18,4 +18,6 @@ Test datasets used in the paper are in the [data](https://github.com/favelow/gra
 
 You can also generate new datasets in two steps: instance generation and preprocessing. You can generate solved TSP instances using:
 ```
-./generate_instances.py <number of instances to generate> <number
+./generate_instances.py <number of instances to generate> <number of nodes> <dataset directory>
+```
+The specified directory is created. Each instance is a pickled `netwo
