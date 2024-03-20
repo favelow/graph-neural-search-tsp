@@ -26,4 +26,4 @@ Then, prepare the dataset using:
 ```
 ./preprocess_dataset.py <dataset directory>
 ```
-This splits the dataset into training, validation, and test sets
+This splits the dataset into training, validation, and test sets written to `train.txt`, `val.txt`, and `test.txt` respectively. It also fits a scaler t
