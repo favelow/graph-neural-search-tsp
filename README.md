@@ -28,4 +28,4 @@ Then, prepare the dataset using:
 ```
 This splits the dataset into training, validation, and test sets written to `train.txt`, `val.txt`, and `test.txt` respectively. It also fits a scaler to the training set.
 
-After this step, the datasets can be easily manipulat
+After this step, the datasets can be easily manipulated using `gnngls.TSPDataset`. For example, in [train.py](https://github.com/favelow/graph-n
