@@ -33,4 +33,6 @@ After this step, the datasets can be easily manipulated using `gnngls.TSPDataset
 ## Training
 Train the model using:
 ```
-./train.
+./train.py <dataset directory> <tensorboard directory> --use_gpu
+```
+A new directory will be c
