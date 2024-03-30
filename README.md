@@ -35,4 +35,4 @@ Train the model using:
 ```
 ./train.py <dataset directory> <tensorboard directory> --use_gpu
 ```
-A new directory will be c
+A new directory will be created under the specified Tensorboard directory, progress and checkpoint
