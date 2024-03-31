@@ -35,4 +35,9 @@ Train the model using:
 ```
 ./train.py <dataset directory> <tensorboard directory> --use_gpu
 ```
-A new directory will be created under the specified Tensorboard directory, progress and checkpoint
+A new directory will be created under the specified Tensorboard directory, progress and checkpoints will be stored there.
+
+## Testing
+Evaluate the model using:
+```
+./test.py <dataset director
