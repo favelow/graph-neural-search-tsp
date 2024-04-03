@@ -42,4 +42,4 @@ Evaluate the model using:
 ```
 ./test.py <dataset directory>/test.txt <checkpoint path> <run directory> regret_pred --use_gpu
 ```
-T
+The search progress for all instances in the dataset will be written to the specified run direc
