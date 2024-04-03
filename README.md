@@ -55,4 +55,5 @@ Here's a simple demonstration to help you get started:
 pipenv install
 pipenv shell
 cd scripts
-python generate_instances.py 
+python generate_instances.py 500 10 data
+python preprocess_dataset.py data --n_train 400 --n_val 50 --n_test 50
