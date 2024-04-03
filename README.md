@@ -44,4 +44,6 @@ Evaluate the model using:
 ```
 The search progress for all instances in the dataset will be written to the specified run directory as a pickled `pandas.DataFrame`.
 
-For example, you can run the pretraine
+For example, you can run the pretrained model as follows:
+```
+./test.py ../data/tsp100/test.txt ../models/tsp20/checkpoint_best_val.pt ../
