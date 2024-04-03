@@ -42,4 +42,6 @@ Evaluate the model using:
 ```
 ./test.py <dataset directory>/test.txt <checkpoint path> <run directory> regret_pred --use_gpu
 ```
-The search progress for all instances in the dataset will be written to the specified run direc
+The search progress for all instances in the dataset will be written to the specified run directory as a pickled `pandas.DataFrame`.
+
+For example, you can run the pretraine
