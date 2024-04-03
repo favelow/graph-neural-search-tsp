@@ -57,3 +57,5 @@ pipenv shell
 cd scripts
 python generate_instances.py 500 10 data
 python preprocess_dataset.py data --n_train 400 --n_val 50 --n_test 50
+python train.py data models --use_gpu
+python test.py data/test.txt models/<new model directory>/chec
