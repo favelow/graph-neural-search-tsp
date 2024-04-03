@@ -40,4 +40,6 @@ A new directory will be created under the specified Tensorboard directory, progr
 ## Testing
 Evaluate the model using:
 ```
-./test.py <dataset director
+./test.py <dataset directory>/test.txt <checkpoint path> <run directory> regret_pred --use_gpu
+```
+T
