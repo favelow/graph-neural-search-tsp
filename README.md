@@ -46,4 +46,8 @@ The search progress for all instances in the dataset will be written to the spec
 
 For example, you can run the pretrained model as follows:
 ```
-./test.py ../data/tsp100/test.txt ../models/tsp20/checkpoint_best_val.pt ../
+./test.py ../data/tsp100/test.txt ../models/tsp20/checkpoint_best_val.pt ../runs regret_pred --use_gpu
+```
+
+## Minimal Example
+Here's a simple demonstration 
