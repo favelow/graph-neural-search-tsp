@@ -50,4 +50,9 @@ For example, you can run the pretrained model as follows:
 ```
 
 ## Minimal Example
-Here's a simple demonstration 
+Here's a simple demonstration to help you get started:
+```
+pipenv install
+pipenv shell
+cd scripts
+python generate_instances.py 
