@@ -65,4 +65,5 @@ python test.py data/test.txt models/<new model directory>/checkpoint_best_val.pt
 If you find this code useful for your research, please cite our paper:
 ```
 @inproceedings{hudson2022graph,
-    title={Graph Neural Network Guided Local Search for the Traveling 
+    title={Graph Neural Network Guided Local Search for the Traveling Salesperson Problem},
+    author={Benjamin Hudson and Qingbiao Li and Matthew Ma
