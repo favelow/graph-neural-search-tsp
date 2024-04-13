@@ -66,4 +66,5 @@ If you find this code useful for your research, please cite our paper:
 ```
 @inproceedings{hudson2022graph,
     title={Graph Neural Network Guided Local Search for the Traveling Salesperson Problem},
-    author={Benjamin Hudson and Qingbiao Li and Matthew Ma
+    author={Benjamin Hudson and Qingbiao Li and Matthew Malencia and Amanda Prorok},
+    booktitle={International Conference on Learning Representation
